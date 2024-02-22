@@ -14,7 +14,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const traducaoClima = {
     "few clouds": "Poucas nuvens",
-    "scattered clouds": "Nuvens dispersas"
+    "scattered clouds": "Nuvens dispersas",
+    "overcast clouds": "Nublado",
+    "shower rain": "Chuva rápida",
+    "broken clouds": "Sem nuvens",
+    "light intensity drizzle": "Chuva suave",
+    "clear sky": "Céu limpo",
+    "mist": "Névoa",
+    "haze": "Neblina",
+    "fog": "Nevoeiro",
+    "light rain": "Chuva leve",
+    "moderate rain": "Chuva Moderada",
+    "heavy rain": "Chuva intensa",
+    "light snow": "Neve fraca",
+    "moderate snow": "Neve moderada",
+    "heavy snow": "Neve intensa",
+    "thunderstorm": "Tempestade com trovões",
+    "drizzle": "Chuvisco",
+    "freezing rain": "Chuva congelante",
+    "tornado": "Tornado"
 }
 
 app.get('/climatempo/:cidade', async (req, res)=>{
@@ -22,13 +40,13 @@ app.get('/climatempo/:cidade', async (req, res)=>{
 
     try{
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
-        if(response.static === 200){
-            const clima = traducaoClima[response.data.weather[0].descripition] || response.data.weather[0].descripition;
+        if(response.status === 200){
+            const clima = traducaoClima[response.data.weather[0].description] || response.data.weather[0].description;
 
             const watherData = {
-                Temperatura: response.data.main.temp,
-                Umidade: response.data.main.humidity,
-                VelocidadeDoVento: response.data.main.speed,
+                Temperatura: response.data.main.temp + "ºC",
+                Umidade: response.data.main.humidity + "%",
+                VelocidadeDoVento: response.data.wind.speed + "m/s",
                 Clima: clima
             }
 
