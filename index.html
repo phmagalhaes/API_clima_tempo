@@ -15,6 +15,7 @@
     </form>
 
     <div id="climaResult"></div>
+    <img id="climaImage">
 
     <script>
         document.getElementById("formClima").addEventListener("submit", function(event){
@@ -31,9 +32,19 @@
                     tempoResult.innerHTML = `Temperatura: ${data.Temperatura}ºC <br>
                     Umidade: ${data.Umidade}% <br>
                     Velocidade do Vento: ${data.VelocidadeDoVento} m/s <br>
-                    Descrição do Clima: ${data.Clima}`;
+                    Descrição do Clima: ${data.Clima} <br>`;
                 } else{
                     tempoResult.innerHTML = "Erro ao obter dados metereológicos!";
+                }
+
+            })
+            .then(data => {
+                const tempoImagem = document.getElementById("climaImage")
+
+                if(data.Imagem){
+                    tempoImagem.innerHTML = `${data.Imagem}`;
+                } else{
+                    tempoImagem.innerHTML = "Erro ao obter dados imagem!";
                 }
 
             })

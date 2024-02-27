@@ -47,7 +47,8 @@ app.get('/climatempo/:cidade', async (req, res)=>{
                 Temperatura: response.data.main.temp,
                 Umidade: response.data.main.humidity,
                 VelocidadeDoVento: response.data.wind.speed,
-                Clima: clima
+                Clima: clima,
+                Imagem: response.data.weather.icon
             }
 
             res.send(watherData);
