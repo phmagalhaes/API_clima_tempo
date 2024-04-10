@@ -1,4 +1,4 @@
-# Modelo de Código Readme
+# Utilização da API Open Weather Map
 
 ## Funcionalidade
 
