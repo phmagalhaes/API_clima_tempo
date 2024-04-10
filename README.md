@@ -98,3 +98,5 @@ Link para a API:https://openweathermap.org/api
 ### Requisitos de infraestrutura
 
 Node.js (para executar um servidor local)
+
+## Todos os comandos do código estão descritos no mesmo
