@@ -1,3 +1,4 @@
+/* Define um estilo básico para a página */
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +8,7 @@
     font-family: "Krub";
 }
 
+/* Estiliza o contêiner do vídeo */
 .video-container {
     position: fixed;
     top: 0;
@@ -16,56 +18,64 @@
     overflow: hidden;
 }
 
+/* Estiliza o elemento de vídeo */
 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.5; /* Define a opacidade do vídeo */
 }
 
+/* Estiliza o corpo da página */
 body {
     height: 100vh;
-    background-color: #fdfdfd;
+    background-color: #fdfdfd; /* Define a cor de fundo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+/* Estiliza a barra de navegação principal */
 .main-header-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     height: 100px;
-    background-color: #0d5782;
+    background-color: #0d5782; /* Define a cor de fundo da barra de navegação */
     position: relative;
 }
 
+/* Estiliza o título na barra de navegação */
 .main-header-nav-title {
     display: flex;
     justify-content: space-around;
     align-items: end;
 }
 
+/* Estiliza o título da previsão do tempo */
 .main-header-nav-title-weather {
     font-family: "Krona One";
-    color: #fdfdfd;
+    color: #fdfdfd; /* Define a cor do texto */
     font-size: 50px;
     padding: 0 10px 0 0;
 }
 
+/* Estiliza a parte "sábia" do título na barra de navegação */
 .main-header-nav-title-wise {
     font-family: "Krub";
     color: #fdfdfd;
     font-size: 40px;
 }
 
+/* Estiliza o logotipo na barra de navegação */
 .main-header-nav-logo {
     width: 140px;
     position: relative;
     margin-top: 70px;
 }
 
+/* Estiliza a seção principal da cidade */
 .main-city {
     display: flex;
     flex-direction: column;
@@ -75,6 +85,7 @@ body {
     position: relative;
 }
 
+/* Estiliza o título da cidade */
 .main-city h3 {
     color: #0a4363;
     font-weight: 500;
@@ -82,6 +93,7 @@ body {
     font-style: inherit;
 }
 
+/* Estiliza o formulário da cidade */
 .main-city-form {
     display: flex;
     flex-direction: column;
@@ -89,6 +101,7 @@ body {
     margin-top: 10px;
 }
 
+/* Estiliza a entrada de texto do formulário */
 .main-city-form input {
     padding-left: 20px;
     width: 700px;
@@ -97,6 +110,7 @@ body {
     background-color: #d9d9d9;
 }
 
+/* Estiliza o botão do formulário */
 .main-city-form button {
     width: 100px;
     height: 50px;
@@ -105,12 +119,14 @@ body {
     background-color: #d9d9d9;
 }
 
+/* Estiliza a seção de informações do clima */
 .main-clima {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
+/* Estiliza o contêiner de resultado do clima */
 #climaResult {
     margin-top: 4rem;
     display: none;
@@ -123,6 +139,7 @@ body {
     padding: 20px;
 }
 
+/* Estiliza o nome da cidade no resultado do clima */
 .clima-city-name {
     display: flex;
     text-align: center;
@@ -132,6 +149,7 @@ body {
     text-shadow: 0px 0px 5px #fdfdfd;
 }
 
+/* Estiliza a temperatura da cidade no resultado do clima */
 .clima-city-temp {
     display: flex;
     justify-content: center;
@@ -141,6 +159,7 @@ body {
     font-size: 50px;
 }
 
+/* Estiliza o ícone do clima */
 .clima-city-icon {
     display: flex;
     text-align: center;
@@ -150,41 +169,46 @@ body {
     font-size: 20px;
 }
 
+/* Estiliza o rodapé do clima */
 .clima-city-bot {
     display: flex;
     align-items: center;
-    /* Alinha os itens verticalmente no centro */
     text-align: center;
     justify-content: center;
     font-weight: 500;
     font-size: large;
 }
 
+/* Estiliza a umidade e o vento da cidade */
 .clima-city-umidade,
 .clima-city-vento {
     display: flex;
     align-items: center;
-    /* Alinha os itens verticalmente no centro */
     margin-top: 30px;
 }
 
+/* Estiliza o espaçamento entre elementos */
 .espacamento {
     margin: 0 10px;
-    /* Adiciona espaçamento horizontal entre os elementos */
     margin-top: 30px;
 }
 
+/* Estiliza a bandeira da cidade */
 .flag-city {
     width: 40px;
     margin: 0 15px;
 }
 
+/* Estiliza o mapa de pinos */
 #pin_map {
     position: relative;
     margin-left: 15px;
     margin-top: 3px;
 }
 
+/* Media queries para ajustes de estilo responsivo */
+
+/* Ajustes para telas menores */
 @media (max-width: 815px) {
     .main-city-form input {
         width: 500px;
@@ -306,66 +330,60 @@ body {
     }
 }
 
-@media(min-width: 1980px) {
+/* Ajustes para telas maiores */
+@media (min-width: 1980px) {
     .main-header-nav-title-weather {
         font-size: 75px;
-      }
-      .main-header-nav-title-wise {
+    }
+    .main-header-nav-title-wise {
         font-size: 55px;
-      }
-      .main-header-nav-logo {
-          width: 200px;
-          margin-top: 70px;
-      }
-      .main-header-nav {
-          height: 150px;
-      }
-
-      .main-city{
+    }
+    .main-header-nav-logo {
+        width: 200px;
+        margin-top: 70px;
+    }
+    .main-header-nav {
+        height: 150px;
+    }
+    .main-city {
         margin-top: 150px;
-      }
+    }
     .main-city-form input {
         width: 1200px;
         height: 75px;
         font-size: 30px;
-      }
-      .main-city h3 {
+    }
+    .main-city h3 {
         font-size: 60px;
         font-weight: 600;
-      }
-      .main-city-form button {
+    }
+    .main-city-form button {
         width: 155px;
         height: 75px;
         font-size: 25px;
-      }
-
+    }
     #climaResult {
         margin-top: 7rem;
         width: 800px;
         padding: 40px 10px;
     }
-
     .clima-city-name {
         font-size: 60px;
     }
-
     .clima-city-temp {
         padding: 60px 0;
         font-size: 70px;
     }
-
     .clima-city-icon {
         font-size: 40px;
         padding: 20px 0;
     }
-
     .clima-city-bot {
         font-size: 35px;
     }
     .espacamento {
         margin: 10 30px;
     }
-
     .flag-city {
         width: 70px;
     }
