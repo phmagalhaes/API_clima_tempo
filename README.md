@@ -77,6 +77,9 @@ Foram realizados testes manuais de funcionalidade e usabilidade da aplicação.
 
 ### Processo de implantação
 
+Link para a API:https://openweathermap.org/api
+- Faça login no site e anote sua API KEY
+
 Para implantar a aplicação WeatherWise, é necessário:
 
 1. Clone o repositório em seu ambiente local.
@@ -92,8 +95,6 @@ Para implantar a aplicação WeatherWise, é necessário:
 8. Insira o nome da cidade desejada no campo de entrada.
 9. Pressione Enter ou clique no botão de envio.
 10. Aguarde a resposta do servidor e veja as informações meteorológicas exibidas na página.
-
-Link para a API:https://openweathermap.org/api
 
 ### Requisitos de infraestrutura
 
